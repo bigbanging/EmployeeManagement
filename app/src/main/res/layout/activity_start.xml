@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.litte.employeemanagement.StartActivity">
+
+    <TextView
+        android:id="@+id/tv_startTitle"
+        style="@style/Title"
+        android:text="员工管理" />
+
+    <Button
+        android:id="@+id/btn_start_register"
+        style="@style/button_style"
+        android:text="员工注册"
+        android:layout_below="@+id/tv_startTitle"
+        android:onClick="register"/>
+    <Button
+        android:id="@+id/btn_start_login"
+        android:layout_below="@id/btn_start_register"
+        style="@style/button_style"
+        android:text="员工登录"
+        android:onClick="login"/>
+    <Button
+        android:id="@+id/btn_start_add"
+        android:layout_below="@id/btn_start_login"
+        style="@style/button_style"
+        android:text="员工添加"
+        android:onClick="addEmployee"/>
+    <Button
+        android:id="@+id/btn_start_scan"
+        android:layout_below="@id/btn_start_add"
+        style="@style/button_style"
+        android:text="员工浏览"
+        android:onClick="scanEmployee"/>
+</RelativeLayout>

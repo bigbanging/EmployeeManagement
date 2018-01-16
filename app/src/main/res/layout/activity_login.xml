@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.litte.employeemanagement.activity.LoginActivity">
+
+    <TextView
+        style="@style/Title"
+        android:text="用户登陆"
+        android:id="@+id/tv_login_title" />
+
+    <TextView
+        android:id="@+id/tv_login_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_login_title"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="79dp"
+        android:text="登陆账号:"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/et_login_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:ems="10"
+        android:inputType="text"
+        android:layout_alignBaseline="@+id/tv_login_username"
+        android:layout_alignBottom="@+id/tv_login_username"
+        android:layout_toEndOf="@+id/tv_login_username"
+        android:background="@drawable/edit_bg"/>
+
+    <TextView
+        android:id="@+id/tv_login_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_login_username"
+        android:layout_below="@+id/et_login_username"
+        android:layout_marginTop="56dp"
+        android:text="登陆密码:"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/et_login_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/et_login_username"
+        android:layout_below="@+id/et_login_username"
+        android:layout_marginTop="43dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:background="@drawable/edit_bg"/>
+
+    <TextView
+        android:id="@+id/tv_login_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_login_password"
+        android:layout_below="@+id/et_login_password"
+        android:layout_marginTop="57dp"
+        android:text="  验证码  :"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/et_login_code"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/et_login_password"
+        android:layout_below="@+id/et_login_password"
+        android:layout_marginTop="43dp"
+        android:ems="4"
+        android:inputType="text"
+        android:background="@drawable/edit_bg"/>
+
+    <ImageView
+        android:id="@+id/img_login_code"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/et_login_code"
+        android:layout_alignEnd="@+id/et_login_password"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:onClick="login_getCode"/>
+
+    <Button
+        android:onClick="login_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="登   陆"
+        android:textSize="22sp"
+        android:background="@drawable/button_bg"
+        android:layout_below="@+id/et_login_code"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
